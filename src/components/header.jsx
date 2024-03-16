@@ -4,14 +4,19 @@ import { useState } from 'react';
 
 export default function Heading () {
 /*
-    const [tasks, setTask] = useState([]);
-
     function addTask () {
         console.log("hi")
         console.log(tasks)
         setTask([...tasks, "testString"])
     }
 */
+
+    const [rows, setRows] = useState([]);
+
+    function addRows () {
+        
+    
+    }
     return(
         /*
         <Container id='task-list-container' onClick={addTask}>
@@ -25,12 +30,12 @@ export default function Heading () {
             </ul>
         </Container>
          */
-            <Form>
+            <Form onSubmit={addRows}>
                 <Container id="header-container">
                     
                         <Form.Group className="mb-3" controlId="task">
                             <Row className='task-add-container'>
-                                <Col xs={1} id='task-add-button'><Button className="test">Add</Button></Col>
+                                <Col xs={1} id='task-add-button'><Button onClick={addRows} className="test">Add</Button></Col>
                                 <Col xs={11} id="task-add-input"><Form.Control type="text" placeholder="enter task"/></Col>
                             </Row>
                         </Form.Group>
