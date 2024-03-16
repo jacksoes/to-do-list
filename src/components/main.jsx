@@ -1,6 +1,4 @@
-import { useState } from "react";
-import {useEffect } from "react";
-
+import { Container, Row, Col, Form, Button } from "react-bootstrap"
 /*
 export default function Gridz () {
 
@@ -30,3 +28,17 @@ export default function Gridz () {
     )
 }
 */
+export default function Main() {
+
+
+    return(<Container id="main-container">
+
+        <Form>
+            <Row>
+                <Col  xs={1}><Button>remove </Button></Col>
+                <Col xs={11} >hello this is ur message</Col>
+            </Row>
+        </Form> 
+
+        </Container>)
+}

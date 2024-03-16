@@ -27,10 +27,14 @@ export default function Heading () {
          */
             <Form>
                 <Container style={{background: "red"}}>
-                    <Row>
-                        <Col xs={1} className='task-add-button'><Button className="test">Add</Button></Col>
-                        <Col>A separte col</Col>
-                    </Row>
+                    
+                        <Form.Group className="mb-3" controlId="task">
+                            <Row className='task-add-container'>
+                                <Col xs={1} className='task-add-button'><Button className="test">Add</Button></Col>
+                                <Col><Form.Control type="text" placeholder="enter task"/></Col>
+                            </Row>
+                        </Form.Group>
+                    
                 </Container>
             </Form>
     );

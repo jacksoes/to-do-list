@@ -1,48 +1,24 @@
 
-.Wrapper{
-  background-color: red;
-}
-
-.navbar {
-  background-color: green;
-  display: flex;
- 
-}
-
-.navbar ul{
-  display: flex;
-  gap: 30px;
-
-}
-
-.navbar ul li{
-  display: inline-block;
-
-}
-
-#task-list-container{
-  background-color: rebeccapurple;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-#task-list{
-  display: block;
-}
-
-#task-list li{
-  display: block;
-  padding: 25px;
-}
-
-
-
-.task-add-button{
+.task-add-container{
   justify-content: center;
   align-items: center;
   padding: 2vh;
 
+  background-color: gold;
+
 }
 
+.col, .col-1{
+  background-color: gold;
+}
+
+
+*, .btn-primary{
+  background-color: navy;
+}
+
+
+#main-container{
+  background-color: red;
+  display: flex;
+}
