@@ -1,4 +1,5 @@
 import './App.css';
+import "./App.scss"
 
 import Heading from './components/header';
 import Main from './components/main';
