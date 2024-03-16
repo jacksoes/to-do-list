@@ -18,19 +18,42 @@
 }
 
 
-*, .btn-primary{
-  background-color: navy;
+*{
+
 }
 
-
-#main-container{
-  background-color: red;
-  
-  
-}
 
 #main-row{
-  background-color: green;
+  background-color: gold;
   display: flex;
+  border-radius: 10px;
+
+  padding: 2vh;
+
   
+
+
+}
+
+#main-col, #main-col1 {
+  background-color: gold;
+  
+}
+
+.main-button{
+  background-color: red !important;
+  padding: 5px !important;
+  margin: 5px !important;
+}
+
+#main-col1{
+  display: flex;
+  align-items: center;
+
+  
+
+}
+
+.main-col1-text{
+  text-align: start;
 }
