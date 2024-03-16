@@ -34,9 +34,13 @@ export default function Main() {
     return(<Container id="main-container">
 
         <Form>
-            <Row>
-                <Col  xs={1}><Button>remove </Button></Col>
-                <Col xs={11} >hello this is ur message</Col>
+            <Row id="main-row">
+                <Col  xs={4}>
+                    <Button>remove</Button>
+                </Col>
+                <Col xs={8}>
+                    hello this is ur message 
+                </Col>
             </Row>
         </Form> 
 

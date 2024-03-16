@@ -1,15 +1,20 @@
 
+
 .task-add-container{
   justify-content: center;
   align-items: center;
   padding: 2vh;
-
   background-color: gold;
+
+  border-radius: 10px;
+
+
 
 }
 
-.col, .col-1{
+#task-add-button, #task-add-input{
   background-color: gold;
+  
 }
 
 
@@ -20,5 +25,12 @@
 
 #main-container{
   background-color: red;
+  
+  
+}
+
+#main-row{
+  background-color: green;
   display: flex;
+  
 }
