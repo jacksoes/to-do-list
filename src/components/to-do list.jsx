@@ -24,14 +24,23 @@ export default function ToDoList () {
         setTask([...tasks, input])
     }
 
-    function removeTask () {
-        console.log("hello")
-
+    function removeTask (index) {
+        setTask(t => t.filter((__, i) => i !== index));
     }
 
+    const forms = tasks.map((task, index) => 
+    <Row key={index} className="main-row">
+        <Col className="main-col"  xs={2}>
+            <Button title="remove-item" onClick={() =>removeTask(index)} className="main-button">remove</Button>
+        </Col>
+        <Col className="main-col1" xs={10}>
+            <div className="main-col1-text">{task} index is {index}</div>
+        </Col>
+    </Row>)
 
 
-    function loadForm () {
+
+    const loadForm = () => {
         return (<div>
 
             <Form onSubmit={addTask}>
@@ -39,7 +48,7 @@ export default function ToDoList () {
                     
                         <Form.Group className="mb-3" controlId="task">
                             <Row className='task-add-container'>
-                                <Col xs={1} id='task-add-button'><Button type="submit" className="test">Add</Button></Col>
+                                <Col xs={1} id='task-add-button'><Button title="add-item" type="submit" className="test">Add</Button></Col>
                                 <Col xs={11} id="task-add-input"><Form.Control type="text" placeholder="enter task"/></Col>
                             </Row>
                         </Form.Group>
@@ -49,29 +58,14 @@ export default function ToDoList () {
         </div>)
     }
 
-    function loadTasks (){
-       
-        return (<div>
-
-        {
-        tasks.map((task, index) => 
-            <Row key={index} className="main-row">
-                <Col className="main-col"  xs={2}>
-                    <Button onClick={removeTask} className="main-button">remove</Button>
-                </Col>
-                <Col className="main-col1" xs={10}>
-                    <div className="main-col1-text">{task} index is {index}</div>
-                </Col>
-            </Row>)
-        }
-
-        </div>);
-    }
+   
 
     return(<div>
 
             {loadForm()}
-            {loadTasks()}
+
+            
+            {forms}
                 
                 </div>);
     
